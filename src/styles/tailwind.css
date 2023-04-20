@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: block;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/Inter-italic.var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Agrandir';
+  font-weight: bold;
+  font-display: block;
+  font-style: bold;
+  src: url('/fonts/Agrandir-NarrowBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Agrandir';
+  font-weight: 500;
+  font-display: block;
+  font-style: normal;
+  src: url('/fonts/Agrandir-NarrowMedium.woff') format('woff');
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#__next {
+  min-height: 100%;
+}
