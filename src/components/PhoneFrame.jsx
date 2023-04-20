@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import clsx from 'clsx'
 
-import frame from '@/images/phone-frame-iphone2.png'
+import frame from '@/images/phone-frame-iPhone2.png'
 
 function PlaceholderFrame(props) {
   return (
