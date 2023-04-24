@@ -42,7 +42,6 @@ export function Footer() {
           </div>
 
         </div>
-x
       </Container>
     </footer>
   )

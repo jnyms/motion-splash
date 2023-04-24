@@ -59,7 +59,7 @@ export function Faqs() {
           <p className="mt-4 text-lg text-gray-600">
             If you have anything else you want to ask,{' '}
             <Link
-              href="mailto:info@example.com"
+              href="mailto: founders@motion-app.com"
               className="text-gray-900 underline"
             >
               reach out to us
