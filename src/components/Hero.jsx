@@ -97,26 +97,26 @@ export function Hero() {
     <div className="overflow-hidden py-none pt-4 bg-gradient-to-b from-teal-100">
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-none">
-          <div className="relative z-10 py-none pt-8 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:py-36 xl:col-span-6 text-center lg:text-left">
-            <Logomark className="h-10 mb-8 mx-auto lg:w-auto lg:mx-0" />
-            <h1 className="text-4xl font-medium tracking-normal text-gray-900 font-title leading-tight">
+          <div className="relative z-10 py-none pt-8 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:py-32 xl:col-span-6 text-center lg:text-left">
+            <Logomark className="h-10 mb-6 lg:mb-10 mx-auto lg:w-auto lg:mx-0" />
+            <h1 className="text-4xl lg:text-5xl font-medium tracking-normal text-gray-900 font-title leading-tighter">
               Fitness progress made fun.
             </h1>
-            <p className="mt-4 mb-9 text-lg text-gray-600">
+            <p className="mt-5 mb-9 text-lg text-gray-600">
               Grow your Activatar by hitting your personalised weekly activity and fitness goals. Keep your Activatar fit and healthy by doing the same!
             </p>
 
-            <Button color="gray">
+            <Button color="gray" className="px-5 cursor-pointer" href="https://motion-app.typeform.com/to/KO4QimKk#name=xxxxx">
               <span className="text-lg">Get early access</span>  
             </Button>
           </div>
           <div className="relative mt-12 lg:col-span-5 lg:row-span-2 lg:mt-8 xl:col-span-6">
             <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
             <div className="-mx-4 h-[448px] px-9 [mask-image:linear-gradient(to_bottom,white_100%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-top-10 lg:-bottom-20 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
-              <PhoneFrame className="mx-auto max-w-[366px]" priority>
+              <PhoneFrame className="mx-auto max-w-[366px] hover:scale-95 transition" priority>
                 <Image src={screenGoal} alt="The goal screen of the app" />
-                <video autoPlay muted loop playsinline="" className='absolute'>
-                  <source src={"/level5-content.mp4"} />
+                <video autoPlay muted loop playsinline="" className='absolute w-[calc(240/366*100%)] ml-[calc(60/366*100%)] mt-[calc(50/366*100%)]'>
+                  <source src={"/level10-content.mp4"} />
                 </video>
               </PhoneFrame>
             </div>

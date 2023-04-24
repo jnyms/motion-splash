@@ -36,7 +36,7 @@ export function Footer() {
           </p>
               </div>
             </div>
-            <nav className="mt-11 flex gap-8 hidden">
+            <nav className="mt-11 flex gap-8">
               <NavLinks />
             </nav>
           </div>

@@ -13,9 +13,9 @@ import TargetIconAsset from '@/images/icon-target.svg'
 import TrophyIconAsset from '@/images/icon-trophy.svg'
 import DumbbellIconAsset from '@/images/icon-dumbbell.svg'
 import screenGoal from '@/images/screen-goal.png'
-import screenSmart from '@/images/screen-smart.png'
-import screenGrow from '@/images/screen-grow.png'
-import screenSocial from '@/images/screen-social.png'
+import imageSmart from '@/images/screen-analyse.png'
+import imageGrow from '@/images/screen-grow.png'
+import imageSocial from '@/images/screen-social.png'
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
 
@@ -59,6 +59,31 @@ function TrophyIcon(props) {
 function DumbbellIcon(props) {
   return (
     <Image src={DumbbellIconAsset} alt="Icon of a target" unoptimized {...props} />
+  )
+}
+function screenSmart(props) {
+  return (
+    <div>
+      <Image src={imageSmart} alt="Icon of a target" unoptimized {...props} />
+      <video autoPlay muted loop playsinline="" className='absolute w-full top-[calc(20/366*100%)]'>
+        <source src={"/screen-analyse.mp4"} />
+      </video>
+    </div>
+  )
+}
+function screenGrow(props) {
+  return (
+    <div>
+      <Image src={imageGrow} alt="Icon of a target" unoptimized {...props} />
+      <video autoPlay muted loop playsinline="" className='absolute w-[calc(220/366*100%)] ml-[calc(80/366*100%)] top-[calc(40/366*100%)]'>
+        <source src={"/level5-content.mp4"} />
+      </video>
+    </div>
+  )
+}
+function screenSocial(props) {
+  return (
+    <Image src={imageSocial} alt="Icon of a target" unoptimized {...props} />
   )
 }
 
@@ -278,11 +303,7 @@ function FeaturesDesktop() {
                     key={feature.name + changeCount}
                     className="col-start-1 row-start-1 flex focus:outline-offset-[32px] [&:not(:focus-visible)]:focus:outline-none"
                   >
-                    {/* <feature.screen
-                      animated
-                      custom={{ isForwards, changeCount }}
-                    /> */}
-                    <Image src={feature.screenshot} alt="" />
+                    <feature.screenshot />
                   </Tab.Panel>
                 ) : null
               )}
@@ -346,7 +367,7 @@ function FeaturesMobile() {
                 />
               </div>
               <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
-              <Image src={feature.screenshot} alt="" />
+              <feature.screenshot />
               </PhoneFrame>
               <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur sm:p-10">
                 <feature.icon className="h-8 w-8" />

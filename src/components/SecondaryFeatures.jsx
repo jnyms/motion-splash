@@ -44,15 +44,15 @@ export function SecondaryFeatures() {
         </div>
         <ul
           role="list"
-          className="mx-auto mt- grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-16 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-16 md:grid-cols-3 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
         >
           {features.map((feature) => (
             <li
               key={feature.name}
-              className="rounded-2xl border border-gray-200 p-8 text-center"
+              className="rounded-2xl border border-gray-200 p-8 text-center hover:shadow-md transition"
             >
-              <Image src={feature.icon} alt="Icon showing the feature" className="h-24 w-auto mx-auto" />
-              <h3 className="mt-6 text-lg font-semibold text-gray-900 leading-snug">
+              <Image src={feature.icon} alt="Image showing the feature" className="h-24 w-auto mx-auto hover:scale-105 transition" />
+              <h3 className="mt-5 text-lg font-semibold text-gray-900 leading-snug">
                 {feature.name}
               </h3>
               <p className="mt-2 text-gray-700">{feature.description}</p>
