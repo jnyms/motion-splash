@@ -33,7 +33,7 @@ const faqs = [
     {
       question: 'How do I level up my avatar?',
       answer:
-        'You can grow your Activatar by hitting your personalised weekly activity and fitness goals. By hitting these goals, you earn Shakes, which can be claimed to progress to the enxt level. Keep your Activatar fit and healthy by doing the same!',
+        'You can grow your avatar by hitting your personalised weekly activity and fitness goals. By hitting these goals, you earn shakes, which can be claimed to progress to the enxt level. Keep your avatar fit and healthy by doing the same!',
     },
   ],
 

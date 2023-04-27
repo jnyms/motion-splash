@@ -99,10 +99,10 @@ export function Hero() {
           <div className="py-none relative z-10 mx-auto max-w-2xl pt-8 text-center lg:col-span-7 lg:max-w-none lg:py-32 lg:text-left xl:col-span-6">
             <Logomark className="mx-auto mb-6 h-8 lg:h-9 lg:mx-0 lg:mb-10 lg:w-auto" />
             <h1 className="font-title text-4xl font-bold text-gray-900 lg:text-5xl leading-10 lg:leading-normal">
-              Get your Fitness Avatar
+              Meet your fitness avatar
             </h1>
             <p className="mt-5 mb-6 lg:mb-10 text-md lg:text-xl text-gray-600">
-              The Motion app makes fitness progress fun. Level up by hitting your personalised weekly activity
+              Motion makes fitness progress fun. Level up by hitting your personalised weekly activity
               and fitness goals.
             </p>
 

@@ -40,7 +40,7 @@ const features = [
   {
     name: 'Hit goals. Earn shakes. Level up.',
     description:
-      'When you hit your goals, you earn shakes, which level up your Avatar. Keep your Avatar fit and healthy by doing the same!',
+      'When you hit your goals, you earn shakes, which level up your avatar. Keep your avatar fit and healthy by doing the same!',
     icon: TargetIcon,
     screen: InvestScreen,
     screenshot: screenGrow,
@@ -440,7 +440,7 @@ export function PrimaryFeatures() {
             Hit your weekly goals to level up
           </h2>
           <p className="mt-4 text-md lg:text-xl text-gray-400">
-            We sync and then analyse your fitness data to set smart weekly fitness goals. Hit your targets and you’ll start levelling up your Avatar!
+            We sync and then analyse your fitness data to set smart weekly fitness goals. Hit your targets and you’ll start levelling up your avatar!
           </p>
         </div>
       </Container>

@@ -16,7 +16,7 @@ export function CallToAction() {
         <div className="mx-auto max-w-lg text-center">
           <AppIcon className="h-16 w-auto mb-7 mx-auto" />
           <h2 className="text-3xl font-bold font-title tracking-normal leading-tight text-white lg:text-4xl">
-            Claim your Avatar today
+            Claim your avatar today
           </h2>
           <p className="mt-4 text-md lg:text-lg text-gray-300">
           Motion is in early access, so there is limited space for users to test the app. Secure your place now.
