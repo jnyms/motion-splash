@@ -50,9 +50,9 @@ export function Header() {
       <nav>
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
-            <div className="hidden lg:flex lg:gap-10">
-              <Link href="/"><Logomark className="h-5 mx-auto pr-8 lg:w-auto lg:mx-0" /></Link>
-              <NavLinks />
+          <Link href="/"><Logomark className="h-6 w-auto mx-auto pr-8 lg:w-auto lg:mx-0" /></Link>
+            <div className="hidden lg:flex gap-10">
+              <NavLinks/>
             </div>
           </div>
           <div className="flex items-center gap-6">

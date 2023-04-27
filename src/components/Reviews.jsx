@@ -214,7 +214,7 @@ function ReviewGrid() {
   return (
     <div
       ref={containerRef}
-      className="relative -mx-4 mt-16 grid h-[49rem] max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 sm:mt-20 md:grid-cols-2 lg:grid-cols-3"
+      className="relative -mx-4 mt-12 grid h-[49rem] max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 lg:mt-20 md:grid-cols-2 lg:grid-cols-3"
     >
       {isInView && (
         <>
@@ -255,16 +255,16 @@ export function Reviews() {
     <section
       id="reviews"
       aria-labelledby="reviews-title"
-      className="pt-20 pb-16 sm:pt-32 sm:pb-24 bg-teal-50"
+      className="pt-12 pb-16 lg:pt-24 sm:pb-24 bg-teal-50"
     >
       <Container>
         <h2
           id="reviews-title"
           className="text-3xl font-bold font-title tracking-normal leading-tight text-gray-900 sm:text-center"
         >
-          People get fitter with Motion.
+          People get fitter with Motion
         </h2>
-        <p className="mt-4 text-lg text-gray-600 sm:text-center">
+        <p className="mt-4 text-md lg:text-xl text-gray-600 sm:text-center">
           Join the thousands of people who are getting fitter with the app.
         </p>
         <ReviewGrid />

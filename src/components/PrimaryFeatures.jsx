@@ -16,58 +16,99 @@ import screenGoal from '@/images/screen-goal.png'
 import imageSmart from '@/images/screen-analyse.png'
 import imageGrow from '@/images/screen-grow.png'
 import imageSocial from '@/images/screen-social.png'
+import imageIntegrate from '@/images/screen-integrate.png'
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
 
 const features = [
   {
-    name: 'Set smart weekly fitness goals',
+    name: 'Link with fitness apps + wearables',
     description:
-      'Grow your Activatar by hitting your personalised weekly activity and fitness goals. Keep your Activatar fit and healthy by doing the same!',
+      'By connecting directly to your smartwatch or through your health app, we can synchronise your data automatically and instantly.',
+    icon: DumbbellIcon,
+    screen: InviteScreen,
+    screenshot: screenIntegrate,
+  },
+  {
+    name: 'Get smart weekly fitness goals',
+    description:
+      'Motion analyses your average activity levels from your fitness data and translates them into a simple score we call activity points.',
     icon: TrophyIcon,
     screen: InviteScreen,
     screenshot: screenSmart,
   },
   {
-    name: 'Hit targets to level up your avatar',
+    name: 'Hit goals. Earn shakes. Level up.',
     description:
-      'Grow your Activatar by hitting your personalised weekly activity and fitness goals. Keep your Activatar fit and healthy by doing the same!',
+      'When you hit your goals, you earn shakes, which level up your Avatar. Keep your Avatar fit and healthy by doing the same!',
     icon: TargetIcon,
     screen: InvestScreen,
     screenshot: screenGrow,
-  },
-  {
-    name: 'Encourage and compete with friends',
-    description:
-      'Grow your Activatar by hitting your personalised weekly activity and fitness goals. Keep your Activatar fit and healthy by doing the same!',
-    icon: DumbbellIcon,
-    screen: StocksScreen,
-    screenshot: screenSocial,
   },
 ]
 
 function TargetIcon(props) {
   return (
-    <Image src={TargetIconAsset} alt="Icon of a target" unoptimized {...props} />
+    <Image
+      src={TargetIconAsset}
+      alt="Icon of a target"
+      unoptimized
+      {...props}
+    />
   )
 }
 function TrophyIcon(props) {
   return (
-    <Image src={TrophyIconAsset} alt="Icon of a target" unoptimized {...props} />
+    <Image
+      src={TrophyIconAsset}
+      alt="Icon of a target"
+      unoptimized
+      {...props}
+    />
   )
 }
 function DumbbellIcon(props) {
   return (
-    <Image src={DumbbellIconAsset} alt="Icon of a target" unoptimized {...props} />
+    <Image
+      src={DumbbellIconAsset}
+      alt="Icon of a target"
+      unoptimized
+      {...props}
+    />
   )
 }
+
 function screenSmart(props) {
   return (
     <div>
-      <Image src={imageSmart} alt="Icon of a target" unoptimized {...props} />
-      <video autoPlay muted loop playsinline="" className='absolute w-full top-[calc(20/366*100%)]'>
-        <source src={"/screen-analyse.mp4"} />
+      <Image
+        src={imageSmart}
+        alt="A smart goal being calculated from user fitness data"
+        unoptimized
+        {...props}
+      />
+      <video
+        autoPlay
+        muted
+        loop
+        playsinline=""
+        className="absolute top-[calc(20/366*100%)] w-full"
+      >
+        <source src={'/screen-analyse.mp4'} />
       </video>
+    </div>
+  )
+}
+
+function screenIntegrate(props) {
+  return (
+    <div>
+      <Image
+        src={imageIntegrate}
+        alt="Fitness apps and wearables"
+        unoptimized
+        {...props}
+      />
     </div>
   )
 }
@@ -75,8 +116,14 @@ function screenGrow(props) {
   return (
     <div>
       <Image src={imageGrow} alt="Icon of a target" unoptimized {...props} />
-      <video autoPlay muted loop playsinline="" className='absolute w-[calc(220/366*100%)] ml-[calc(80/366*100%)] top-[calc(40/366*100%)]'>
-        <source src={"/level5-content.mp4"} />
+      <video
+        autoPlay
+        muted
+        loop
+        playsinline=""
+        className="absolute top-[calc(40/366*100%)] ml-[calc(80/366*100%)] w-[calc(220/366*100%)]"
+      >
+        <source src={'/level5-content.mp4'} />
       </video>
     </div>
   )
@@ -159,20 +206,6 @@ function InviteScreen({ custom, animated = false }) {
             Invite person
           </div>
         </div>
-      </MotionAppScreenBody>
-    </AppScreen>
-  )
-}
-
-function StocksScreen({ custom, animated = false }) {
-  return (
-    <AppScreen className="w-full">
-      <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-        <AppScreen.Title>Stocks</AppScreen.Title>
-        <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
-      </MotionAppScreenHeader>
-      <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
-
       </MotionAppScreenBody>
     </AppScreen>
   )
@@ -273,8 +306,8 @@ function FeaturesDesktop() {
             )}
             <div className="relative z-10 p-8">
               <feature.icon className="h-8 w-8" />
-              <h3 className="mt-6 text-xl font-title font-bold text-white">
-                <Tab className="text-left [&:not(:focus-visible)]:focus:outline-none tracking-wide">
+              <h3 className="mt-6 font-title text-2xl font-medium text-white">
+                <Tab className="text-left tracking-wide [&:not(:focus-visible)]:focus:outline-none">
                   <span className="absolute inset-0 rounded-2xl" />
                   {feature.name}
                 </Tab>
@@ -291,24 +324,11 @@ function FeaturesDesktop() {
           <CircleBackground color="#13B5C8" className="animate-spin-slower" />
         </div>
         <PhoneFrame className="z-10 mx-auto w-full max-w-[366px]">
-          <Tab.Panels as={Fragment}>
-            <AnimatePresence
-              initial={false}
-              custom={{ isForwards, changeCount }}
-            >
               {features.map((feature, featureIndex) =>
                 selectedIndex === featureIndex ? (
-                  <Tab.Panel
-                    static
-                    key={feature.name + changeCount}
-                    className="col-start-1 row-start-1 flex focus:outline-offset-[32px] [&:not(:focus-visible)]:focus:outline-none"
-                  >
-                    <feature.screenshot />
-                  </Tab.Panel>
+                  <feature.screenshot />
                 ) : null
               )}
-            </AnimatePresence>
-          </Tab.Panels>
         </PhoneFrame>
       </div>
     </Tab.Group>
@@ -367,11 +387,11 @@ function FeaturesMobile() {
                 />
               </div>
               <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
-              <feature.screenshot />
+                <feature.screenshot />
               </PhoneFrame>
               <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur sm:p-10">
                 <feature.icon className="h-8 w-8" />
-                <h3 className="mt-4 text- font-semibold text-white sm:text-lg">
+                <h3 className="text-lg mt-4 font-semibold text-white sm:text-lg">
                   {feature.name}
                 </h3>
                 <p className="mt-2 text-sm text-gray-400">
@@ -411,23 +431,23 @@ export function PrimaryFeatures() {
   return (
     <section
       id="features"
-      aria-label="Features for investing all your money"
-      className="bg-gray-900 py-20 sm:py-32"
+      aria-label=""
+      className="bg-gray-900 py-12 lg:py-24"
     >
       <Container>
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
-          <h2 className="text-3xl font-bold tracking-normal leading-tight text-white font-title">
-            Hit your weekly goals to level up.
+        <div className="mx-auto max-w-2xl text-center lg:max-w-3xl">
+          <h2 className="font-title text-3xl font-bold leading-tight tracking-normal text-white">
+            Hit your weekly goals to level up
           </h2>
-          <p className="mt-4 text-lg text-gray-400">
-            The surest way to make progress is by doing more than you previously did. Motion makes this simple, with automatic tracking of workouts and movement from your wearable, which we convert into our simple Motion score.
+          <p className="mt-4 text-md lg:text-xl text-gray-400">
+            We sync and then analyse your fitness data to set smart weekly fitness goals. Hit your targets and you’ll start levelling up your Avatar!
           </p>
         </div>
       </Container>
-      <div className="mt-16 md:hidden">
+      <div className="mt-6 md:hidden">
         <FeaturesMobile />
       </div>
-      <Container className="hidden md:mt-20 md:block">
+      <Container className="hidden md:mt-16 md:block">
         <FeaturesDesktop />
       </Container>
     </section>
